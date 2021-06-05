@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>PhoneBook</title>
+    </head>
+    <body>
+        <div>
+            <header>
+                <div>
+                    <h1><a href="{% url 'records_list' %}">Listed records</a></h1>
+                </div>
+                <div>
+                    <a href="{% url 'records_new' %}">+ New record</a>
+                </div>
+                <div>
+                    <a href="{% url 'records_select' %}">Group selection</a>
+                </div>
+            </header>
+        {% block content %}
+        {% endblock content %}
+        </div>
+    </body>
+</html>

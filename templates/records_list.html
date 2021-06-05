@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for record in object_list %}
+        <div class="post-entry">
+            <h2><a href="{% url 'records_detail' record.pk %}">{{record.name}} ({{record.pk}})</a></h2>
+            <p>{{record.group}}</p>
+            <p>{{record.phone}}</p>
+            <p>{{record.mailbox}}</p>
+        </div>
+    {% endfor %}
+{% endblock content %}

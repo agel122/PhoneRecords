@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="post-entry">
+        <h2>{{object.name}}</h2>
+        <p>{{object.phone}}</p>
+        <p>{{object.mailbox}}</p>
+        <p>{{object.group}}</p>
+    </div>
+
+    <p><a href="{% url 'records_edit' object.pk %}"> + Edit Record</a></p>
+    <p><a href="{% url 'records_delete' object.pk %}"> + Delete Record</a></p>
+
+{% endblock content %}
